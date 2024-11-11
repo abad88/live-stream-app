@@ -1,13 +1,18 @@
 import React from 'react';
-import LiveStream from './LiveStream';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Home from './Home';
+import Room from './Room';
 
 function App() {
-    const streamUrl = "https://www.youtube.com/watch?v=Mxp_4OT96QY"; // Replace with the actual stream URL
 
     return (
-        <div className="App">
-            <h1>Live Stream Viewer</h1>
-            <LiveStream streamUrl={streamUrl} />
+        <div className='App'>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/room/:roomId' element={<Room/>}/>
+            </Routes>
+        </BrowserRouter>
         </div>
     );
 }
