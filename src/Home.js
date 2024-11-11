@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 
 const Home = () => {
     const [name, setName] = useState("");
-    const [role, setRole] = useState("Audiance");
+    const [role, setRole] = useState("Audience");
     const [roomId, setRoomId] = useState("");
     const navigate = useNavigate()
 
@@ -23,7 +23,7 @@ const Home = () => {
             <input type='Radio' value={"Host"} checked={role==="Host"} onChange={e=>setRole(e.target.value)}/>Host
         </label>
         <label>
-            <input type='Radio' value={"Audiance"} checked={role==="Audiance"} onChange={e=>setRole(e.target.value)}/>Audiance
+            <input type='Radio' value={"Audience"} checked={role==="Audience"} onChange={e=>setRole(e.target.value)}/>Audiance
         </label>
       </div>
       <button onClick={navigateToRoom}>Join Room</button>
